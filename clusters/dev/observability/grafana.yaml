@@ -1,3 +1,5 @@
+# Grafana user:     admin
+# Grafana password: prom-operator
 # ---
 # apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 # kind: Kustomization
@@ -11,17 +13,17 @@
 #   sourceRef:
 #     kind: GitRepository
 #     name: monitoring
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
-# kind: Kustomization
-# metadata:
-#   name: monitoring-config
-#   namespace: flux-system
-# spec:
-#   interval: 1h0m0s
-#   path: ./global/monitoring/monitoring-config
-#   prune: true
-#   sourceRef:
-#     kind: GitRepository
-#     name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: monitoring-config
+  namespace: flux-system
+spec:
+  interval: 1h0m0s
+  path: ./global/monitoring/monitoring-config
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
 
