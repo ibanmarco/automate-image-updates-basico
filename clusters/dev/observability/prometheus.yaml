@@ -8,7 +8,7 @@ spec:
   interval: 30m0s
   ref:
     branch: main
-  url: https://github.com/ibanmarco/automate-image-update-basico
+  url: https://github.com/ibanmarco/automate-image-updates-basico
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
